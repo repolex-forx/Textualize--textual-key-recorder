@@ -8,7 +8,7 @@
     {
       "@id": "https://repolex.ai/r/Textualize/textual-key-recorder/commit/8c3176ca020b261f041a4d9d7dc927a279cc69c1",
       "git:hexsha": "8c3176ca020b261f041a4d9d7dc927a279cc69c1",
-      "repolex:parseStatus": "metadata_complete"
+      "repolex:parseStatus": "ast_complete"
     },
     {
       "@id": "https://repolex.ai/r/Textualize/textual-key-recorder/commit/c61ea6fac623864033145aba30dfa93d56a55bbf",
