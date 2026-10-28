@@ -1,1 +1,120 @@
-Initializing
+# Repolex Knowledge Graph of Textualize/textual-key-recorder
+
+RDF knowledge graph data for [Textualize/textual-key-recorder](https://github.com/Textualize/textual-key-recorder), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download Textualize/textual-key-recorder
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 8c3176ca020b261f041a4d9d7dc927a279cc69c1
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 8c3176ca020b261f041a4d9d7dc927a279cc69c1
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 0433ad90f73a4513665a5c862c16da9733ac90be.nq.gz
+│   ├── 113cdd7b18033152bb6383e209a03a90b8a97fea.nq.gz
+│   ├── 15b6a457b6af3020766c056cb517695a1fd12793.nq.gz
+│   ├── 1be5bdb4c984f43e498ece5befabcf39edc9c10b.nq.gz
+│   ├── 26c1255e4474f80d20850191d835c69cec8f950a.nq.gz
+│   ├── 3274e8f76cff5107676320422c98306369c99c56.nq.gz
+│   ├── 392a7880fe3e72f23358b22e30a7eab20bad047a.nq.gz
+│   ├── 3b8a5b4b61f2305045c138a0a84db3606e49065b.nq.gz
+│   ├── 40e9b4748dc834286e3f13f2ef36281a4dfefeb0.nq.gz
+│   ├── 4311fe4edfcedab5d56f7084c563876a11966cdd.nq.gz
+│   ├── 44dddbef9260c093de88c15503694285c3d5bcb3.nq.gz
+│   ├── 4e94b8a2b0b9463fed246e8981910d736433bc04.nq.gz
+│   ├── 565933f785827c778890ec0dd946aca7666e8d98.nq.gz
+│   ├── 5f95f6d8349107256c3610225688f06ddefbe4ea.nq.gz
+│   ├── 61c294de8a8f09c928c05f759766a295758c7e86.nq.gz
+│   ├── 6226441ddfc6080fd37f355bd60408467a642ab0.nq.gz
+│   ├── 644cb3ede3b1ebe8762c81636f13b22ac986d666.nq.gz
+│   ├── 718e1c2a0a4e168c09bd3fabc38ffc019e158618.nq.gz
+│   ├── 82b1c92c376688215da3e4ad9ecd718fe04ca834.nq.gz
+│   ├── 8462cc2ca0e3141dbedf650961f345b150907c50.nq.gz
+│   ├── 86ceccea7f77eec84dddc8e09dab8c7015869a89.nq.gz
+│   ├── 8a0a70cc647433d067402f93bafbff7733e0b960.nq.gz
+│   ├── 8d59f724098c62a3b6ad6e371e38c2523f703ff0.nq.gz
+│   ├── 8eed879454443388f2a9ea897563f3510374ab61.nq.gz
+│   ├── 922fa5c8fdfbf0c7ba15affcabf4cf410075fd86.nq.gz
+│   ├── 925b0409682060b99355920a0da4124a73da6ffc.nq.gz
+│   ├── 946caddc856356370a2386b58e3840809565d492.nq.gz
+│   ├── a3fb2823c0f45a10ca5b81f5b3ac82b3659553d9.nq.gz
+│   ├── a90bfe47a3f85c32c83eac4c5b6ef75a758ce529.nq.gz
+│   ├── adfff903c029a41a5c2594f8c66737080f2e790a.nq.gz
+│   ├── aeb60edfd074c47f72dfcfdacf0a419a0afb9a46.nq.gz
+│   ├── b210db9871ae7f72468e2a0ec5fcc9dff58beff6.nq.gz
+│   ├── b51f0c440ab97322f1a8d1719ebcd730abe9d933.nq.gz
+│   ├── bc34433592d9416ca73eca26b2be3360d9cdc28b.nq.gz
+│   ├── c032b3888cedc21701118bf2949857ae3e566fcf.nq.gz
+│   ├── c63733fa2cbde1983f0c3548f670579716f9f414.nq.gz
+│   ├── ca53449e3f72909b80ba8772b3167b4ecfb5cc10.nq.gz
+│   ├── d2e73a0f2bb6606bd3e88c0c5ce0c0e62ca5553e.nq.gz
+│   ├── d927592bce8e1c87525813862ad7ebc7f5758b90.nq.gz
+│   ├── e13a8795f8f5e72bf96dc9abc59dfc0364606172.nq.gz
+│   ├── ebd601bbcbb73d129f577de0b268c6bd339c302a.nq.gz
+│   ├── fb20dcfe7f9d843ae2c1c42975b8af23b61eaf77.nq.gz
+│   └── fe33833061a1a50dac03b11945341f8485e63c13.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 8c3176ca020b261f041a4d9d7dc927a279cc69c1.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+12 directories, 50 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[Textualize/textual-key-recorder](https://github.com/Textualize/textual-key-recorder)
+
+---
+*Parsed on 2026-10-28 by [repolex](https://repolex.ai)*

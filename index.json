@@ -1,0 +1,11 @@
+{
+  "org": "Textualize",
+  "repo": "textual-key-recorder",
+  "versions": [
+    {
+      "commit": "8c3176ca020b261f041a4d9d7dc927a279cc69c1",
+      "tag": "",
+      "parsed_at": "2026-10-28T12:22:14.535152+00:00"
+    }
+  ]
+}
